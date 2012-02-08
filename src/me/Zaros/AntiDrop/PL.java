@@ -21,7 +21,7 @@ public class PL extends PlayerListener{
 	public void onPlayerDropItem(PlayerDropItemEvent e){
 		Player p = e.getPlayer();
 		String pstring = e.getPlayer().getName();
-		if (p.getGameMode().equals(GameMode.CREATIVE)) {
+		if (p.getGameMode().equals(GameMode.SURVIVAL)) {
 			if (!p.hasPermission("AntiDrop.Allow") && !p.isOp()) {
 				p.sendMessage(ChatColor.RED + "You are not allowed to do this.");
 				log.info("Player '" + pstring + "' tried to drop blocks in creative mode!");
